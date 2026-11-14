@@ -4,6 +4,7 @@ Run with:  python manage.py test
 """
 import shutil
 import tempfile
+from datetime import timedelta
 
 from django.contrib.auth.models import User
 from django.core.files.uploadedfile import SimpleUploadedFile
@@ -46,6 +47,11 @@ class PostModelTests(PostTestBase):
     def test_newest_post_comes_first(self):
         newer = Post.objects.create(
             title='second post', body='x', author=Profile.objects.get(user=self.author)
+        )
+        # make the first post clearly older (on Windows two posts created in the
+        # same moment can get the same timestamp)
+        Post.objects.filter(pk=self.post.pk).update(
+            created=newer.created - timedelta(minutes=1)
         )
         self.assertEqual(Post.objects.first(), newer)
 

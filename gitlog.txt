@@ -1,0 +1,239 @@
+﻿commit 23dc742e5aa65f51b60da637bb430e9effa71b51
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 18:19:19 2026 -0500
+
+    Add unit tests for posts and profiles
+
+commit fc2aac1acf60e4c751f63b4d6193b7d4b08b16cc
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 18:00:34 2026 -0500
+
+    Require login on all views and author permission on update/delete
+
+commit e382ba00f5e8d907adffd676238451b6bbf86a4e
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 17:53:23 2026 -0500
+
+    Restrict delete to post author with custom decorator
+
+commit a3002657adc6d10c9fcd11f76c19d2bce50e28a5
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 17:33:23 2026 -0500
+
+    Update profile with Ajax
+
+commit 3fe133c28d31fd91fa56f67e8fb77e4a015a5cf2
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 17:30:01 2026 -0500
+
+    Build profile template with avatar and form
+
+commit 6f6ad19a05795c2f6d0027842a1a3f51398df7d9
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 17:26:02 2026 -0500
+
+    Register my profile URL and add profile template
+
+commit 0e13c68ae6cb3b4b35da80ca30963563fb60ff0f
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 17:23:16 2026 -0500
+
+    Add profile form and my_profile_view
+
+commit 9e5b97a12ccb9bc542f5686e4ae9f7a5911943f6
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 17:18:47 2026 -0500
+
+    Quick improvements: back link, reset Dropzone on close, max 3 files
+
+commit 6038edcfc7b812eafbd1ed9e42bdd33805390376
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 17:00:45 2026 -0500
+
+    Show Dropzone after creating a post
+
+commit a1c648341e4937e812266dbc34617770b94996b7
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 16:53:00 2026 -0500
+
+    Add image upload view
+
+commit e580523f318a891c4cd569e1bdf643ce6255c98e
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 16:46:17 2026 -0500
+
+    Add Dropzone to create-post modal
+
+commit 61f6810893a30fdbb80436d2f0667c2115645bfd
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 16:31:02 2026 -0500
+
+    Show post photos in a carousel on detail page
+
+commit 19dd80063b37cad808fda88108b31638b177573d
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 16:17:46 2026 -0500
+
+    Add Photo model and register in admin
+
+commit b035060544b4076f12065829760c83c944172643
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 16:12:23 2026 -0500
+
+    Delete post with Ajax and show message via localStorage
+
+commit 1e31ddf60837dc1fbd34b9ec96d0069492d6588f
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 14:55:53 2026 -0500
+
+    Add update and delete post views
+
+commit 382d1debe4ecd2f5cfd00ef0419ccb2a44e76ff7
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 14:44:58 2026 -0500
+
+    Add update and delete modals on detail page
+
+commit 8de081d19a2aaf8cdb8b494f5e4e463690198e61
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 14:30:53 2026 -0500
+
+    Show post title and body on detail page
+
+commit 21fa64fca2c22d7bf1cafbdd798d2ba3d3960d9e
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 14:16:41 2026 -0500
+
+    Show update and delete buttons only to the post author
+
+commit 057d210402f9efb5ecf3de14a991d06fadfbaa8c
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 13:59:44 2026 -0500
+
+    Add favicon
+
+commit 0443576f1813676e460cb19f775467a712743511
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 13:32:24 2026 -0500
+
+    Load post detail data with Ajax
+
+commit 800d93b5e69effafbed1459262f0614defec2cb3
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 13:28:31 2026 -0500
+
+    Add detail page buttons and back navigation
+
+commit 9e9018e3f08d0237600d6f0a70fc93df5f2294af
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 13:18:50 2026 -0500
+
+    Add post detail page and fix form reset
+
+commit 893f895d6361854da8d88376073e4b54e9019f41
+Author: Chris Nguyen <Nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 13:05:12 2026 -0500
+
+    Reset post form after adding a post
+
+commit 22f051fa9af753013fc838d7984603e5f98ede57
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 04:15:55 2026 -0500
+
+    Create posts with Ajax and show alerts
+
+commit c6cdb6309c59506ca615aa16eb24764ada0bfe2f
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 03:52:46 2026 -0500
+
+    Add post form to the create modal
+
+commit f7e9ebde970f9b377f988ac085e6e47229654a34
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 03:38:26 2026 -0500
+
+    Add create-post modal and static placeholders
+
+commit 9bdd72e69d1ba7ccee83d598c08bc301bb02951d
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Sat Nov 14 00:19:54 2026 -0500
+
+    Like and unlike posts with Ajax
+
+commit a60f8a36d7d887b1eb3aba84052c40efdbcd5b7e
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 23:59:40 2026 -0500
+
+    Show like count and liked state on post cards
+
+commit 3eba783cd2c4fa38cb65bacdf38c69213206b96b
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 23:45:24 2026 -0500
+
+    Load more posts with a button click
+
+commit b935bf78750fd00040e41f081bd8806144ab8af7
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 23:31:10 2026 -0500
+
+    Render posts as Bootstrap cards
+
+commit 4cd299e8cc956d23aafb2cc3b2b4bbc365a07998
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 23:24:19 2026 -0500
+
+    Show loading spinner while posts load
+
+commit 518e3de2d354a4410ccb96914f1aa4fb7c793ba6
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 23:18:29 2026 -0500
+
+    Load posts as JSON with Ajax
+
+commit 1ec7a1074e7a0536eab2097e30314034799513dc
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 23:04:40 2026 -0500
+
+    Add first Ajax call to hello-world view
+
+commit 854df3fbc4d0f8838e076bd363ffef84e1b3a531
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 23:00:45 2026 -0500
+
+    Add first DOM manipulation in main.js
+
+commit d1480743c111ba5992e5239cde3949e236092958
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 22:56:42 2026 -0500
+
+    Add posts main view, urls, template and main.js
+
+commit 305f6d12d295d34ea2b167d1d69cf0c3ba41b0b8
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 22:31:27 2026 -0500
+
+    Create Profile automatically with post_save signal
+
+commit 2d3ff2e427e64f8ce42eb0364c599502d8535c75
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 22:19:41 2026 -0500
+
+    Add Post and Profile models and register them in admin
+
+commit 5a6e9b9db2d6b2835ec17f6e193e3f41694750b0
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 21:46:11 2026 -0500
+
+    Configure settings, templates and static files
+
+commit 30b8467438c5ef56d563d67312c2fcd047cfa00a
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 21:14:03 2026 -0500
+
+    Set up posts_proj with posts and profiles apps
+
+commit 8921716030262a7dc36cb89201312417731c526c
+Author: Chris Nguyen <nnguyen7066@conestogac.on.ca>
+Date:   Fri Nov 13 20:53:25 2026 -0500
+
+    Add .gitignore
