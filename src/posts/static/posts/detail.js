@@ -53,6 +53,14 @@ $.ajax({
         postBox.appendChild(titleEl)
         postBox.appendChild(bodyEl)
 
+        const authorEl = document.createElement('div')
+        authorEl.innerHTML = `
+            <hr>
+            <img src="${data.avatar}" class="rounded-circle" height="64px" width="64px" alt="${data.author}">
+            ${data.author}
+        `
+        postBox.appendChild(authorEl)
+
         titleInput.value = data.title
         bodyInput.value = data.body
 
