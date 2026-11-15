@@ -13,6 +13,16 @@
                     <a class="nav-link {% if request.path == '/profiles/my/' %}active{% endif %}" href="{% url 'profiles:my-profile' %}">My Profile</a>
                 </li>
             </ul>
+            <!-- beyond the course: show who is logged in and allow logging out -->
+            {% if user.is_authenticated %}
+                <div class="ms-auto d-flex align-items-center">
+                    <span class="navbar-text me-3">Logged in as <b>{{ user.username }}</b></span>
+                    <form id="logout-form" method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
+                    </form>
+                </div>
+            {% endif %}
         </div>
     </div>
 </nav>

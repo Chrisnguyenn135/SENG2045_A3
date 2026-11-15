@@ -43,3 +43,23 @@ class MyProfileViewTests(TestCase):
         self.assertEqual(response.json()['bio'], 'hello from tests')
         self.user.profile.refresh_from_db()
         self.assertEqual(self.user.profile.bio, 'hello from tests')
+
+
+class NavbarLogoutTests(TestCase):
+    """Beyond the course: navbar shows the logged-in user and a working Logout button."""
+
+    def setUp(self):
+        self.user = User.objects.create_user(username='chris', password='pass12345')
+        self.client.login(username='chris', password='pass12345')
+
+    def test_navbar_shows_username_and_logout(self):
+        response = self.client.get(reverse('posts:main-board'))
+        self.assertContains(response, 'Logged in as <b>chris</b>', html=False)
+        self.assertContains(response, 'id="logout-form"')
+
+    def test_logout_logs_user_out(self):
+        logout = self.client.post(reverse('logout'))
+        self.assertEqual(logout.url, '/admin/login/')
+        response = self.client.get(reverse('posts:main-board'))
+        self.assertEqual(response.status_code, 302)
+        self.assertIn('/admin/', response.url)
