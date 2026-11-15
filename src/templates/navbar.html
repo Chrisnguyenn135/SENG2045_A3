@@ -12,6 +12,12 @@
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == '/profiles/my/' %}active{% endif %}" href="{% url 'profiles:my-profile' %}">My Profile</a>
                 </li>
+                <!-- beyond the course: link to the admin site, only for superusers -->
+                {% if user.is_superuser %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="admin-link" href="{% url 'admin:index' %}">Admin</a>
+                    </li>
+                {% endif %}
             </ul>
             <!-- beyond the course: show who is logged in and allow logging out -->
             {% if user.is_authenticated %}

@@ -59,7 +59,29 @@ class NavbarLogoutTests(TestCase):
 
     def test_logout_logs_user_out(self):
         logout = self.client.post(reverse('logout'))
-        self.assertEqual(logout.url, '/admin/login/')
+        self.assertEqual(logout.url, '/admin/login/?next=/')
         response = self.client.get(reverse('posts:main-board'))
         self.assertEqual(response.status_code, 302)
         self.assertIn('/admin/', response.url)
+
+    def test_admin_link_hidden_for_normal_user(self):
+        response = self.client.get(reverse('posts:main-board'))
+        self.assertNotContains(response, 'id="admin-link"')
+
+    def test_admin_link_shown_for_superuser(self):
+        User.objects.create_superuser(username='boss', password='pass12345')
+        self.client.login(username='boss', password='pass12345')
+        response = self.client.get(reverse('posts:main-board'))
+        self.assertContains(response, 'id="admin-link"')
+
+
+class LoginRedirectTests(TestCase):
+    """Beyond the course: after logging in, users land on the posts page, not the admin site."""
+
+    def test_login_from_logout_goes_to_posts(self):
+        User.objects.create_user(username='chris', password='pass12345', is_staff=True)
+        response = self.client.post('/admin/login/?next=/', {
+            'username': 'chris', 'password': 'pass12345', 'next': '/',
+        })
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.url, '/')
