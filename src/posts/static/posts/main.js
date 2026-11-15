@@ -161,6 +161,10 @@ postForm.addEventListener('submit', e=>{
             likeUnlikePosts()
             // $('#addPostModal').modal('hide')
             handleAlerts('success', 'New post added!')
+            // beyond the course: the post is saved, so stop it being added twice -
+            // only photos can be added now, and closing the modal resets everything
+            addBtn.disabled = true
+            addBtn.textContent = 'post added - drop photos below'
             // postForm.reset()
         },
         error: function(error){
@@ -182,6 +186,17 @@ closeBtns.forEach(btn=> btn.addEventListener('click', ()=>{
     const myDropzone = Dropzone.forElement("#my-dropzone")
     myDropzone.removeAllFiles(true)
 }))
+
+// beyond the course: whenever the modal closes (close button, X, Esc or clicking outside),
+// clear the form and Dropzone and re-enable the add button for the next post
+document.getElementById('addPostModal').addEventListener('hidden.bs.modal', ()=>{
+    addBtn.disabled = false
+    addBtn.textContent = '+ add'
+    newPostId = null
+    postForm.reset()
+    dropzone.classList.add('not-visible')
+    Dropzone.forElement('#my-dropzone').removeAllFiles(true)
+})
 
 Dropzone.autoDiscover = false
 const myDropzone = new Dropzone('#my-dropzone', {
